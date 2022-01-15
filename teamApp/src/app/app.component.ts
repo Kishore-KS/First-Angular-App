@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'teamApp';
+  newMember = '';
+  memberList: string[] = [];
+
+  newMemberName(newMember: string){
+    this.newMember = newMember
+    console.log(this.newMember)
+  }
 }

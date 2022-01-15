@@ -6,8 +6,8 @@
       <li>Angular</li>
     </ul>
     <div class="add-members-container">
-      <input type="text" placeholder="Enter a name">
-      <button>Add</button>
+      <input #newMember type="text" (input)=newMemberName(newMember.value) placeholder="Enter a name">
+      <button >Add</button>
     </div>
     <div class="input-container">
       <input text="text" placeholder="Number of teams">
