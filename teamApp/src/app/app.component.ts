@@ -37,6 +37,10 @@ export class AppComponent {
       this.errorMessage = "Number of teams can't be 0"
       return;
     }
-    console.log(this.memberList.length/this.numberOfTeams)
+    let teamList: string[][] = [];
+    for (let members in this.memberList) {
+      teamList[this.numberOfTeams--].push(members)
+      console.log(teamList)
+    }
   }
 }
