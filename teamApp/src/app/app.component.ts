@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   memberName = "";
-  numberOfTeams = 0;
+  numberOfTeams: number | "" = "";
   memberList: string[] = [];
   errorMessage = "";
 
