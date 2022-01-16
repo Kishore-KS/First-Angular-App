@@ -2,16 +2,16 @@
   <div class="ui card">
     <h1>Team Generator</h1>
     <ul class="list">
-      <li>React</li>
-      <li>Angular</li>
+      <li *ngFor="let members of memberList">{{members}}</li>
     </ul>
     <div class="add-members-container">
-      <input #newMember type="text" (input)=newMemberName(newMember.value) placeholder="Enter a name">
-      <button >Add</button>
+      <input #newMember type="text" (input)=saveMemberName(newMember.value) [value]="memberName" placeholder="Enter a name">
+      <button (click)=addMember()>Add</button>
     </div>
     <div class="input-container">
-      <input text="text" placeholder="Number of teams">
-      <button>Generate</button>
+      <input #nTeams type="number" (input)=saveNumberOfTeams(nTeams.value) [value]="numberOfTeams" placeholder="Number of teams">
+      <button (click)=generateTeams()>Generate</button>
     </div>
+    <p class="error-msg" *ngIf="errorMessage">{{errorMessage}}</p>
   </div>
 </div>
